@@ -92,11 +92,11 @@ void set_dalvik_heap_size()
     sysinfo(&sys);
 
         // from - phone-xhdpi-2048-dalvik-heap.mk
-        heapstartsize = "16m";
+        heapstartsize = "8m";
         heapgrowthlimit = "128m";
         heapsize = "256m";
         heaptargetutilization = "0.75";
-        heapminfree = "4m";
+        heapminfree = "2m";
         heapmaxfree = "8m";
 
     property_override("dalvik.vm.heapstartsize", heapstartsize);
