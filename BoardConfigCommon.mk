@@ -112,7 +112,10 @@ TARGET_SCREEN_DENSITY := 320
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-# FM
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
+#FM
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
