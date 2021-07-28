@@ -1,2 +1,7 @@
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
+
+# ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
