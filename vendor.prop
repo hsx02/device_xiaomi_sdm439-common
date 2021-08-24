@@ -300,6 +300,7 @@ debug.cpurend.vsync=false
 debug.sf.disable_client_composition_cache=1
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
+ro.launcher.blur.appLaunch=0
 
 # SurfaceFlinger
 ro.surface_flinger.running_without_sync_framework=true
