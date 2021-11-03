@@ -275,7 +275,6 @@ debug.hwui.renderer=opengl
 debug.cpurend.vsync=false
 debug.sf.enable_gl_backpressure=1
 debug.sf.disable_backpressure=1
-debug.sf.latch_unsignaled=1
 debug.sf.disable_client_composition_cache=1
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
 ro.surface_flinger.has_wide_color_display=false
