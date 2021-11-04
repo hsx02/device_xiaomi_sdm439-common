@@ -260,9 +260,6 @@ ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
 ro.zram.periodic_wb_delay_hours=24
 
-# zygote
-persist.device_config.runtime_native.usap_pool_enabled=true
-
 # graphics
 debug.hwui.renderer=skiagl
 debug.renderengine.backend=skiaglthreaded
@@ -278,7 +275,5 @@ ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
-ro.min.fling_velocity=160
-ro.max.fling_velocity=20000
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
