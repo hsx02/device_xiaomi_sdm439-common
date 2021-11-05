@@ -94,14 +94,12 @@ persist.vendor.dpm.feature=1
 persist.vendor.dpm.loglevel=0
 
 # Display
-debug.egl.hw=0
 debug.enable.sglscale=1
 debug.gralloc.enable_fb_ubwc=1
 debug.mdpcomp.logs=0
 debug.sf.enable_hwc_vds=0
 debug.sf.disable_backpressure=1
 debug.sf.hw=1
-debug.sf.latch_unsignaled=0
 debug.sf.recomputecrop=0
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
@@ -268,12 +266,5 @@ debug.cpurend.vsync=false
 debug.sf.enable_gl_backpressure=1
 debug.sf.disable_backpressure=1
 debug.sf.disable_client_composition_cache=1
-ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
-ro.surface_flinger.has_wide_color_display=false
-ro.surface_flinger.use_color_management=true
-ro.surface_flinger.has_HDR_display=true
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-ro.surface_flinger.protected_contents=true
-ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
