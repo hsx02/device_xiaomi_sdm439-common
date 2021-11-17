@@ -233,3 +233,7 @@ service ppd /vendor/bin/mm-pp-dpps
     group system graphics
     socket pps stream 0660 system system
     disabled
+
+# Restrict permissions to socket file 
+# to hide Magisk & co.
+    chmod 440 /proc/net/unix
