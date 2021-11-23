@@ -7,3 +7,8 @@ allow init firmware_file:filesystem getattr;
 
 # LED
 allow init sysfs_leds:lnk_file r_file_perms;
+
+# Dirac
+allow init dirac_prop:file { relabelto };
+allow init dirac_prop:file { write };
+allow init dirac_prop:file { read };

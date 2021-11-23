@@ -1,2 +1,4 @@
-allow zygote self:capability kill;
-get_prop(zygote, exported_camera_prop)
+allow zygote self:capability kill; 
+get_prop(zygote, exported_camera_prop) allow 
+zygote device:file { write };
+allow zygote device:file { open };

@@ -19,3 +19,17 @@ allow vendor_init {
 allow vendor_init {
   ipa_dev
 }:file rw_file_perms;
+
+allow vendor_init default_prop:file { read };
+
+allow vendor_init bluetooth_prop:file { read };
+
+allow vendor_init device:file { create };
+
+allow vendor_init device:file { write };
+
+allow vendor_init cache_file:dir { write };
+
+allow vendor_init cache_file:dir { remove_name };
+
+allow vendor_init cache_file:file { unlink };
