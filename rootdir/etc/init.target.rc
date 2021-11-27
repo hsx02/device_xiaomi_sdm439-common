@@ -224,6 +224,7 @@ on boot
 # Thermal
     chmod 0664 /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/thermal/thermal_message/sconfig
+    chmod 440 /proc/net/unix
     chmod 0666 /sys/class/thermal/thermal_message/temp_state
     chown system system /sys/class/thermal/thermal_message/temp_state
 
@@ -233,7 +234,3 @@ service ppd /vendor/bin/mm-pp-dpps
     group system graphics
     socket pps stream 0660 system system
     disabled
-
-# Restrict permissions to socket file 
-# to hide Magisk & co.
-    chmod 440 /proc/net/unix
