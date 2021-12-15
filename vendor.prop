@@ -219,8 +219,8 @@ persist.sys.binary_xml=false
 persist.timed.enable=true
 
 # dalvik
-pm.dexopt.boot=verify
-pm.dexopt.first-boot=verify
+pm.dexopt.boot=speed-profile
+pm.dexopt.first-boot=speed-profile
 pm.dexopt.ab-ota=speed-profile
 pm.dexopt.install=speed-profile
 
