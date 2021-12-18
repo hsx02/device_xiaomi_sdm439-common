@@ -99,6 +99,7 @@ debug.mdpcomp.logs=0
 debug.sf.enable_hwc_vds=0
 debug.sf.disable_backpressure=1
 debug.sf.hw=1
+debug.egl.hw=1
 debug.sf.recomputecrop=0
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
@@ -156,6 +157,7 @@ vendor.audio.hw.aac.encoder=true
 vendor.vidc.dec.downscalar_height=1088
 vendor.vidc.dec.downscalar_width=1920
 vendor.vidc.disable.split.mode=1
+vendor.vidc.enc.narrow.searchrange=1
 vendor.vidc.enc.disable.pq=true
 vendor.vidc.enc.disable_bframes=1
 vendor.video.disable.ubwc=1
@@ -236,6 +238,7 @@ ro.config.dha_empty_init=36
 ro.config.dha_lmk_scale=0.545
 ro.config.dha_th_rate=2.3
 ro.config.sdha_apps_bg_max=60
+ro.config.max_starting_bg=8
 
 # perf
 ro.vendor.perf.scroll_opt=true
