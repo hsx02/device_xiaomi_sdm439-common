@@ -1,15 +1,17 @@
 # ART
 dalvik.vm.dex2oat64.enabled=true
 ro.vendor.qti.am.reschedule_service=true
+ro.dex2oat_white_list=com.google.android.gms
 ro.sys.fw.dex2oat_thread_count=8
 dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 dalvik.vm.boot-dex2oat-threads=8
-dalvik.vm.dex2oat-threads=6
-dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
 dalvik.vm.dex2oat-filter=speed-profile
-dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 dalvik.vm.image-dex2oat-filter=speed-profile
-dalvik.vm.image-dex2oat-threads=6
+dalvik.vm.image-dex2oat-threads=8
 dalvik.vm.dex2oat-minidebuginfo=false
 dalvik.vm.minidebuginfo=false
 
@@ -227,18 +229,18 @@ pm.dexopt.install=speed-profile
 
 # memory opts
 ro.vendor.qti.sys.fw.bservice_enable=true
-ro.sys.fw.bservice_limit=15
-ro.sys.fw.bservice_age=30000
+ro.sys.fw.bservice_limit=64
+ro.sys.fw.bservice_age=10000
+ro.sys.fw.use_trim_settings=true
+ro.sys.fw.trim_enable_memory=1073741824
 ro.am.reschedule_service=true
-ro.sys.fw.bg_apps_limit=60
-ro.config.fha_enable=true
-ro.config.dha_cached_max=20
-ro.config.dha_empty_max=36
-ro.config.dha_empty_init=36
-ro.config.dha_lmk_scale=0.545
-ro.config.dha_th_rate=2.3
-ro.config.sdha_apps_bg_max=60
-ro.config.max_starting_bg=8
+ro.config.dha_cached_min=2
+ro.config.dha_cached_max=9
+ro.config.dha_empty_min=6
+ro.config.dha_empty_max=19
+ro.config.dha_empty_init=15
+ro.config.dha_lmk_scale=0.66
+ro.config.sdha_apps_bg_max=50
 
 # perf
 ro.vendor.perf.scroll_opt=true
