@@ -257,6 +257,7 @@ renderthread.skia.reduceopstasksplitting=true
 debug.cpurend.vsync=false
 debug.sf.enable_gl_backpressure=1
 debug.sf.disable_client_composition_cache=1
+ro.surface_flinger.start_graphics_allocator_service=true
 
 # SurfaceFlinger
 debug.sf.early_app_phase_offset_ns=500000
