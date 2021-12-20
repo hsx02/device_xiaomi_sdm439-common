@@ -245,8 +245,8 @@ ro.config.dha_empty_init=15
 ro.config.dha_lmk_scale=0.66
 ro.config.sdha_apps_bg_max=50
 
-# perf
-ro.vendor.perf.scroll_opt=true
+#
+debug.hwui.use_buffer_age=false
 
 # zram
 ro.zram.mark_idle_delay_mins=60
