@@ -250,6 +250,16 @@ ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
 ro.zram.periodic_wb_delay_hours=24
 
+#go_defaults_common.mk
+ro.config.low_ram=false
+pm.dexopt.downgrade_after_inactive_days=10
+pm.dexopt.shared=quicken
+ro.lmk.critical_upgrade=true
+ro.lmk.upgrade_pressure=40
+ro.lmk.downgrade_pressure=60
+ro.lmk.kill_heaviest_task=false
+ro.statsd.enable=false
+
 # graphics
 debug.hwui.renderer=skiagl
 debug.renderengine.backend=skiaglthreaded
