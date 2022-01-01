@@ -221,6 +221,10 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0.vendor
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.xiaomi_sdm439
