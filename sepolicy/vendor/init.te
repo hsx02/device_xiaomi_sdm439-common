@@ -12,3 +12,5 @@ allow init sysfs_leds:lnk_file r_file_perms;
 allow init dirac_prop:file { relabelto };
 allow init dirac_prop:file { write };
 allow init dirac_prop:file { read };
+
+allow init sysfs_graphics:file rw_file_perms;
