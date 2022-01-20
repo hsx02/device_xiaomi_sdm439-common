@@ -243,10 +243,10 @@ persist.sys.binary_xml=false
 persist.timed.enable=true
 
 # dalvik
-pm.dexopt.boot=speed-profile
-pm.dexopt.first-boot=speed-profile
-pm.dexopt.ab-ota=speed-profile
-pm.dexopt.install=speed-profile
+pm.dexopt.boot=verify
+pm.dexopt.first-boot=quicken
+pm.dexopt.ab-ota=quicken
+pm.dexopt.install=quicken
 
 #
 debug.hwui.use_buffer_age=false
