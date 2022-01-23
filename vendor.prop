@@ -263,7 +263,16 @@ ro.lmk.critical_upgrade=true
 ro.lmk.upgrade_pressure=40
 ro.lmk.downgrade_pressure=60
 ro.lmk.kill_heaviest_task=false
+ro.lmk.thrashing_limit=30
+ro.lmk.thrashing_limit_decay=50
 ro.statsd.enable=false
+
+#lmk props
+ro.lmk.low=1001
+ro.lmk.medium=1001
+ro.lmk.critical=1001
+ro.lmk.kill_timeout_ms=100
+ro.lmk.use_minfree_levels=false
 
 # graphics
 debug.hwui.renderer=skiagl
