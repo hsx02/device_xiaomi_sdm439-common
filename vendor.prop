@@ -200,6 +200,9 @@ ro.config.dha_th_rate=2.3
 ro.config.sdha_apps_bg_max=50
 ro.config.sdha_apps_bg_min=2
 
+# Zygote Preforking
+persist.device.config.runtime_native.usap_pool_enabled=true
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
