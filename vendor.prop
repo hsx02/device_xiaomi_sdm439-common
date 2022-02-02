@@ -279,6 +279,13 @@ ro.lmk.thrashing_limit=30
 ro.lmk.thrashing_limit_decay=50
 ro.statsd.enable=false
 
+# PSI
+ro.lmk.use_psi=true
+ro.lmk.swap_util_max=100
+ro.lmk.swap_free_low_percentage=10
+ro.lmk.psi_partial_stall_ms=250
+ro.lmk.psi_complete_stall_ms=700
+
 #lmk props
 ro.lmk.low=1001
 ro.lmk.medium=1001
