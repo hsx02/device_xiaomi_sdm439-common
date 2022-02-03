@@ -190,6 +190,7 @@ ro.vendor.qti.sys.fw.bservice_enable=true
 ro.sys.fw.bservice_limit=6
 ro.sys.fw.bservice_age=10000
 ro.am.reschedule_service=true
+ro.vendor.qti.sys.fw.bg_apps_limit=24
 ro.sys.fw.bg_apps_limit=24
 ro.config.fha_enable=true
 ro.config.dha_cached_max=8
