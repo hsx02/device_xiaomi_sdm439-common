@@ -170,9 +170,9 @@ void load_mods()
     workaround_cts_properties();
 
     /* Custom Build Fingerprint */
-    set_ro_build_prop("fingerprint", "google/raven/raven:12/SQ1D.220105.007/8030436:user/release-keys");
-    property_override("ro.bootimage.build.fingerprint", "google/raven/raven:12/SQ1D.220105.007/8030436:user/release-keys");
-    property_override("ro.build.description", "raven-user 12 SQ1D.220105.007 8030436 release-keys");
+    set_ro_build_prop("fingerprint", "google/raven/raven:12/SQ1D.220205.003/8069835:user/release-keys");
+    property_override("ro.bootimage.build.fingerprint", "google/raven/raven:12/SQ1D.220205.003/8069835:user/release-keys");
+    property_override("ro.build.description", "raven-user 12 SQ1D.220205.003 8069835 release-keys");
 
     /* Spoof Build keys */
 	for (int i = 0; build_keys_props[i]; ++i) {
