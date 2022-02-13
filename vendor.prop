@@ -1,20 +1,22 @@
 # ART
 dalvik.vm.dex2oat64.enabled=true
 ro.vendor.qti.am.reschedule_service=true
+ro.dex2oat_white_list=com.google.android.gms
 ro.sys.fw.dex2oat_thread_count=6
 dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 dalvik.vm.boot-dex2oat-threads=8
-dalvik.vm.dex2oat-threads=8
-dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.dex2oat-threads=6
 dalvik.vm.dex2oat-filter=speed-profile
-dalvik.vm.dex2oat-threads=8
-dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.image-dex2oat-threads=6
 dalvik.vm.image-dex2oat-filter=speed-profile
-dalvik.vm.image-dex2oat-threads=8
 dalvik.vm.dex2oat-minidebuginfo=false
 dalvik.vm.minidebuginfo=false
 
 # Audio
+ro.config.vc_call_vol_steps=7
+ro.config.media_vol_steps=15
 af.fast_track_multiplier=1
 audio.chk.cal.us=0
 audio.deep_buffer.media=true
@@ -30,7 +32,7 @@ vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.feature.incall_music.enable=true
 vendor.audio.flac.sw.decoder.24bit=true
-vendor.audio_hal.period_size=192
+vendor.audio_hal.period_size=240
 vendor.audio.hw.aac.encoder=true
 vendor.audio.offload.buffer.size.kb=64
 vendor.audio.offload.gapless.enabled=true
@@ -98,21 +100,23 @@ debug.enable.sglscale=1
 debug.gralloc.enable_fb_ubwc=1
 debug.mdpcomp.logs=0
 debug.sf.enable_hwc_vds=0
+debug.hwc.winupdate=1
+debug.sf.disable_backpressure=0
+debug.sf.enable_gl_backpressure=1
 debug.egl.hw=0
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+vendor.hwc.dpp.downscale=2
+debug.sf.latch_unsignaled=0
 debug.sf.hw=0
 debug.sf.recomputecrop=0
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 persist.hwc.enable_vds=1
-debug.sf.disable_backpressure=1
-debug.sf.latch_unsignaled=0
 persist.hwc.mdpcomp.enable=true
 persist.sys.sf.color_mode=9
 persist.sys.sf.native_mode=2
 ro.config.avoid_gfx_accel=true
-ro.hardware.egl=adreno
-ro.hardware.vulkan=adreno
-ro.opengles.version=196610
+ro.opengles.version=196609
 ro.qualcomm.cabl=2
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_virtual_display_dimension=4096
@@ -123,6 +127,17 @@ vendor.display.enable_default_color_mode=1
 vendor.display.qdcm.disable_factory_mode=1
 vendor.display.qdcm.mode_combine=1
 vendor.gralloc.enable_fb_ubwc=1
+vendor.display.comp_mask=0
+vendor.display.disable_decimation=1
+vendor.display.disable_excl_rect=0
+vendor.display.disable_excl_rect_partial_fb=1
+vendor.display.disable_hw_recovery_dump=1
+vendor.display.disable_inline_rotator=1
+vendor.display.disable_scaler=0
+vendor.display.disable_ui_3d_tonemap=1
+vendor.display.enable_null_display=0
+vendor.display.enable_optimize_refresh=1
+vendor.gralloc.disable_ubwc=0
 
 # DRM
 drm.service.enabled=true
@@ -145,11 +160,6 @@ persist.vendor.ims.disableIMSLogs=1
 persist.vendor.ims.disableDebugLogs=1
 persist.vendor.ims.disableQXDMLogs=1
 
-# LMKD
-ro.config.low_ram=false
-ro.lmk.log_stats=true
-ro.lmk.use_psi=false
-
 # Media
 av.debug.disable.pers.cache=1
 debug.stagefright.omx_default_rank.sw-audio=1
@@ -158,22 +168,39 @@ media.aac_51_output_enabled=true
 media.msm8956hw=0
 media.stagefright.audio.sink=280
 vendor.mm.enable.qcom_parser=1048575
+media.stagefright.thumbnail.prefer_hw_codecs=true
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
 vendor.audio.hw.aac.encoder=true
 vendor.vidc.dec.downscalar_height=1088
 vendor.vidc.dec.downscalar_width=1920
 vendor.vidc.disable.split.mode=1
+vendor.vidc.enc.narrow.searchrange=1
 vendor.vidc.enc.disable.pq=true
 vendor.vidc.enc.disable_bframes=1
 vendor.video.disable.ubwc=1
 
 # memory opts
 ro.vendor.qti.sys.fw.bservice_enable=true
+ro.sys.fw.bservice_limit=6
+ro.sys.fw.bservice_age=10000
+ro.am.reschedule_service=true
+ro.vendor.qti.sys.fw.bg_apps_limit=24
+ro.sys.fw.bg_apps_limit=24
+ro.config.fha_enable=true
+ro.config.dha_cached_max=8
+ro.config.dha_empty_max=24
+ro.config.dha_empty_init=24
+ro.config.dha_lmk_scale=0.990
+ro.config.dha_th_rate=2.3
+ro.config.sdha_apps_bg_max=50
+ro.config.sdha_apps_bg_min=2
+
+# Zygote Preforking
+persist.device.config.runtime_native.usap_pool_enabled=true
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf.scroll_opt=true
 
 # Network manager daemon
 ro.vendor.use_data_netmgrd=true
@@ -199,6 +226,7 @@ persist.sys.fflag.override.settings_provider_model=false
 persist.vendor.radio.add_power_save=1
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.mt_sms_ack=30
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
@@ -251,6 +279,7 @@ ro.lmk.thrashing_limit_decay=50
 ro.statsd.enable=false
 
 # PSI
+ro.lmk.use_psi=true
 ro.lmk.swap_util_max=100
 ro.lmk.swap_free_low_percentage=10
 ro.lmk.psi_partial_stall_ms=250
@@ -273,6 +302,7 @@ debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 
 # SurfaceFlinger
+ro.surface_flinger.running_without_sync_framework=true
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=10500000
 debug.sf.late.app.duration=20500000
