@@ -1,0 +1,1 @@
+allow thermal-engine system_prop:file { getattr };

@@ -1,0 +1,7 @@
+allow logpersist cache_file:dir { read };
+allow logpersist cache_file:dir { open };
+allow logpersist cache_file:dir { write };
+allow logpersist cache_file:file { ioctl };
+allow logpersist cache_file:dir { add_name };
+allow logpersist cache_file:dir { getattr };
+allow logpersist cache_file:file { getattr };

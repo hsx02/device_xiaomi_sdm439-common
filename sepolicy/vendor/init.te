@@ -1,5 +1,9 @@
 allow init proc_boot_reason:file r_file_perms;
 allow init sysfs_fm_lan:file rw_file_perms;
+allow init vendor_fingerprint_prop:file { relabelto };
+allow init vendor_fingerprint_prop:file { write };
+allow init vendor_fingerprint_prop:file { read };
+allow init proc:file { setattr };
 domain_auto_trans(init, vendor_charger_exec, vendor_charger)
 
 # Allow init bind mounting on vendor files
@@ -12,3 +16,21 @@ allow init firmware_file:filesystem getattr;
 
 # LED
 allow init sysfs_leds:lnk_file r_file_perms;
+
+# Dirac
+allow init dirac_prop:file { relabelto };
+allow init dirac_prop:file { write };
+allow init dirac_prop:file { read };
+
+allow init dt2w_ctrl:file { write };
+allow init dt2w_ctrl:file { open };
+allow init hal_perf_default:binder { call };
+allow init hwservicemanager:binder { call };
+allow init hwservicemanager:binder { transfer };
+allow init vendor_file:file { execute };
+allow init hidl_base_hwservice:hwservice_manager { add };
+allow init same_process_hal_file:file { execute };
+allow init servicemanager:binder { call };
+allow init servicemanager:binder { transfer };
+allow init hal_perf_hwservice:hwservice_manager { find };
+
