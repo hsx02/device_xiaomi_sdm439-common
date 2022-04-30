@@ -126,7 +126,7 @@ PRODUCT_PACKAGES += \
     libstdc++.vendor
 
 PRODUCT_PACKAGES += \
-    Snap
+    GoogleCameraGo
 
 # Display
 PRODUCT_PACKAGES += \
